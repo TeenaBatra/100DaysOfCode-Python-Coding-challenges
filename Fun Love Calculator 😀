@@ -1,0 +1,29 @@
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+
+name=(name1+name2).lower()
+
+countTRUE=0
+countLOVE=0
+
+
+countTRUE+=name.count("t")
+countTRUE+=name.count("r")
+countTRUE+=name.count("u")
+countTRUE+=name.count("e")
+
+countLOVE+=name.count("l")
+countLOVE+=name.count("o")
+countLOVE+=name.count("v")
+countLOVE+=name.count("e")
+
+total_love_score=str(countTRUE)+str(countLOVE)
+love_score_percent=int(total_love_score)
+
+if love_score_percent>90 or love_score_percent < 10:
+    print(f"Your score is {love_score_percent}, you go together like coke and mentos.")
+elif love_score_percent>40 and love_score_percent < 50:
+    print(f"Your score is {love_score_percent}, you are alright together.")
+else:
+    print(f"Your score is {love_score_percent}.")
